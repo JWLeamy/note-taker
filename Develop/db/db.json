@@ -1,6 +1,7 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title":"Note",
+        "text":"This is my first saved note. More to come!",
+        "ID":"001"
     }
 ]
