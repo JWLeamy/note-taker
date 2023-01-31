@@ -8,7 +8,10 @@ module.exports = function(app) {
 
     // GET request - retrieves and presents data (notes) to the user
     app.get("/api/notes", (req, res) => {
-        res.json(allNotes);
+        readFileAsync("../db/db.json", "utf8").then(function(data) {
+            allNotes = JSON.parse(data);
+            res.json(allNotes)
+        })
     }); 
 
     // Post requests -  allows users to post data (notes) to the database

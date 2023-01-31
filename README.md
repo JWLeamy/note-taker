@@ -1,3 +1,3 @@
 # Note Taker Starter Code
 ## todo
-create server that stores note inofmration
+add empty arrray for new notes to be appended
