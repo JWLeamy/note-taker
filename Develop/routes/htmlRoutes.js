@@ -1,19 +1,19 @@
 const path = require("path");
+const router = require("express").Router()
 
-module.exports = function(app) {
     // GET request HTML
-    app.get("/notes", (req, res) => {
-        res.sendFile(path.join(__dirname, "../Develop/public/notes.html"));
+    router.get("/notes", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/notes.html"));
     }); 
 
     // Get request CSS
-    app.get("/styles", (req, res) => {
-        res.sendFile(path.join(__dirname, "../Develop/public/assets/css/styles.css"));
+    router.get("/styles", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/assets/css/styles.css"));
     });
 
     // Get request to return homepage to the index.html
-    app.get("*", (req, res) => {
+    router.get("*", (req, res) => {
         res.sendFile(path.join(__dirname, "../Develop/public/index.html"));
     });
 
-}
+module.exports = router;
