@@ -6,11 +6,6 @@ const router = require("express").Router()
         res.sendFile(path.join(__dirname, "../public/notes.html"));
     }); 
 
-    // Get request CSS
-    router.get("/styles", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/assets/css/styles.css"));
-    });
-
     // Get request to return homepage to the index.html
     router.get("*", (req, res) => {
         res.sendFile(path.join(__dirname, "../Develop/public/index.html"));

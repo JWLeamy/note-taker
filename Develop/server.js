@@ -1,5 +1,4 @@
 // require all neccesary paths for the following functions
-const fs = require('fs');
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 const express = require('express');
@@ -25,4 +24,6 @@ app.get('/', (req, res) => {
 // PORT
 app.listen(PORT,() => {
     console.log(`App listening at http://localhost:${PORT} 🚀`);
-})
+});
+
+module.exports = app;
