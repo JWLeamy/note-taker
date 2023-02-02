@@ -1,11 +1,15 @@
 // Set variable now to avoid "let"/"var" later
-const fs = require("fs");
-var allNotes = require('../db/db.json');
+const fs = require('fs');
+const allNotes = require('../db/db.json');
 const uniqid = require('uniqid');
 
 module.exports = function(app) {
 
-    app.get('/api/notes', (req, res) => res.json(allNotes));
+    app.get('/api/notes', (req, res) => {
+      res.json(allNotes);
+      console.log('yes');
+    });
+    
   
     app.post('/api/notes', (req, res) => {
       req.body['id'] = uniqid();

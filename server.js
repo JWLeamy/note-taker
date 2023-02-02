@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 3001;
 // Middleware to parse the JSON data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/public/assets", express.static(__dirname + "/public/assets"));
 
 
 require("./routes/htmlRoutes")(app);

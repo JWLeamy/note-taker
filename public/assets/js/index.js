@@ -1,11 +1,12 @@
-var $noteTitle;
-var $noteText;
-var $saveNoteBtn;
-var $newNoteBtn;
-var $noteList;
+var noteTitle;
+var noteText;
+var saveNoteBtn;
+var newNoteBtn;
+var noteList;
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
+  console.log("test 1")
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
@@ -98,7 +99,7 @@ const handleNoteDelete = (e) => {
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
   e.preventDefault();
-  activeNote = JSON.parse(e.target.getAttribute('data-note'));
+  activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
   renderActiveNote();
 };
 
@@ -131,7 +132,6 @@ const renderNoteList = async (notes) => {
     liEl.classList.add('list-group-item');
 
     const spanEl = document.createElement('span');
-    spanEl.classList.add('list-item-title');
     spanEl.innerText = text;
     liEl.addEventListener('click', handleNoteView);
 
