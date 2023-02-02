@@ -1,17 +1,14 @@
 const path = require("path");
-const router = require("express").Router()
+const express = require('express');
 
-    // GET request HTML
-    router.get("/notes", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/notes.html"));
-        console.log("htmlroutes working notes");
-    }); 
+    module.exports = function(app) {
 
-    // Get request to return homepage to the index.html
-    router.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/index.html"));
-        console.log("htmlroutes working index");
-
-    });
-
-module.exports = router;
+        app.use(express.static('public'));
+        app.get('/notes', (req, res) => {
+          res.sendFile(path.join(__dirname, '../public/notes.html'));
+        });
+        app.get('*', (req, res) => {
+          res.sendFile(path.join(__dirname, '../public/index.html'));
+        })
+    
+    }
