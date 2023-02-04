@@ -15,7 +15,7 @@ app.use('/', htmlRoutes);
 
 // PORT
 app.listen(PORT, () => {
-    console.log(`App listening on PORT ${PORT}`);
+    console.log(`Example app listening at http://localhost:${PORT}`);
 });
 
 module.exports = app;
