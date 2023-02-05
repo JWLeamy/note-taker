@@ -7,9 +7,9 @@ Content required for usage - Github, Express.JS (framework of node.js) & Heroku
 Steps
 1. Copy the atttached code to your perfered text editor and navigate to it's repository
 2. Install the dependencies within the packaged json ('npm i' in command line)
-3. After loggin into Heroku on your local device, run 'heroku create'
+3. After loggin into Heroku on your local device, run 'heroku create --insert_app_name--'
 4. Once your heroku app is created, run 'git push heroku main' to push the existing code into your newly created application.
-5. Use you application!
+5. Start taking notes!
 
 
 ## User Story 
