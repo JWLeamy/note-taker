@@ -1,6 +1,8 @@
 ## Description
 An appication that allows users to write, review, and save notes using Express.js!
 
+Deployed site: [Heroku] (https://quiet-tor-75556.herokuapp.com/)
+
 ![Note taker](https://user-images.githubusercontent.com/111401066/216795131-e22db08a-c0fb-410d-a18a-2802017d77f5.png)
 
 [Note Taker (1).webm](https://user-images.githubusercontent.com/111401066/216795117-2a9c8647-9b79-474e-8f8e-64667f2d44af.webm)
